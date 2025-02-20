@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 28px;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading{
+    margin-top: 100px;
+}
+
+.input-container{
+    border: 1px solid red;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.input-container input{
+    padding: 10px 20px;
+    font-size: 24px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.input-container button{
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+}
+
+.task-container{
+    border: 1px solid green;
+    list-style:none;
+    padding: 30px 20px;
+    width: 470px;
+}
+
+.todo-item{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid rgb(126, 145, 126);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.list-btn{
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit{
+    background-color: rgb(28, 89, 202);
+    color: #ffffff;
+    
+}
+.edit:hover{
+    background-color: #ffffff;
+    color: rgb(28, 89, 202);
+    transition: all 0.2s ease-in-out;
+}
+
+.del{
+    background-color: rgb(225, 40, 40);
+    color: #ffffff;
+}
+
+.del:hover{
+    color: rgb(225, 40, 40);
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.update-input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 18px;
+}
+
