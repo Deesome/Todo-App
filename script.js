@@ -2,7 +2,9 @@ const input = document.querySelector("input")
 const taskContainer = document.querySelector("ul")
 const addBtn = document.getElementById("add-btn")
 
+
 taskContainer.style.display="none"
+
 
 document.addEventListener("keydown",(e)=>{
     console.log(e.key) // string
@@ -18,6 +20,8 @@ addBtn.addEventListener("click", handleEvent)
 
 function handleEvent() {
     let value = input.value
+    
+    
     
 
     if (!value) {
@@ -53,7 +57,14 @@ function handleEvent() {
     //delete functionality 
 
     deleteButton.addEventListener("click", (e) => {
+        if(taskContainer.childElementCount === 1){
+            e.target.closest("li").remove()
+            taskContainer.style.display = "none"
+            return
+        }
         e.target.closest("li").remove()
+        
+
 
     })
 
