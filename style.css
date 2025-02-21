@@ -11,6 +11,12 @@ body{
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #111111;
+    
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 200px 200px;
 }
 
 .container{
@@ -22,13 +28,20 @@ body{
 
 .heading{
     margin-top: 100px;
+    color: rgb(9, 125, 241);
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 24px;
+    letter-spacing: 2px;
+
 }
 
 .input-container{
-    border: 1px solid red;
+    
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: #F6F6F6;
 }
 
 .input-container input{
@@ -36,7 +49,7 @@ body{
     font-size: 24px;
     outline: none;
     border-radius: 10px;
-    border: none;
+    border: 1px solid rgb(200, 197, 197);
 }
 
 .input-container button{
@@ -44,13 +57,25 @@ body{
     font-size: 24px;
     border: none;
     border-radius: 10px;
+    background-color: rgb(9, 125, 241);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.input-container button:hover{
+    background-color: rgb(6, 82, 158);
+    transition: all 0.2s ease-in-out;
 }
 
 .task-container{
     border: 1px solid green;
+    border-radius: 15px;
+    background-color: #F6F6F6;
     list-style:none;
     padding: 30px 20px;
-    width: 470px;
+    width: 490px;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .todo-item{
@@ -62,6 +87,7 @@ body{
     border: 1px solid rgb(126, 145, 126);
     padding: 10px 10px;
     border-radius: 10px;
+    color: #333333;
 }
 
 .list-btn{
@@ -73,15 +99,18 @@ body{
     cursor: pointer;
 }
 
+
+
 .edit{
     background-color: rgb(28, 89, 202);
     color: #ffffff;
     
 }
 .edit:hover{
-    background-color: #ffffff;
-    color: rgb(28, 89, 202);
+    background-color: rgb(33, 76, 156);
+    
     transition: all 0.2s ease-in-out;
+    
 }
 
 .del{
@@ -90,17 +119,30 @@ body{
 }
 
 .del:hover{
-    color: rgb(225, 40, 40);
-    background-color: #ffffff;
+    
+    background-color: rgb(196, 43, 43);
     transition: all 0.2s ease-in-out;
+    
 }
 
 .update-input{
     outline: none;
     border: none;
     padding: 10px;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #F6F6F6;
+    color: #333333;
     font-size: 18px;
+    
+
+}
+
+.save{
+    background-color: rgb(28, 89, 202);
+    color: #ffffff;
+
+}
+
+.save:hover{
+    background-color: rgb(33, 76, 156);
 }
 

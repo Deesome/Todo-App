@@ -2,8 +2,23 @@ const input = document.querySelector("input")
 const taskContainer = document.querySelector("ul")
 const addBtn = document.getElementById("add-btn")
 
-addBtn.addEventListener("click", () => {
+taskContainer.style.display="none"
+
+document.addEventListener("keydown",(e)=>{
+    console.log(e.key) // string
+    if(e.key==="Enter"){
+        handleEvent()
+        
+    }
+})
+
+addBtn.addEventListener("click", handleEvent)
+
+
+
+function handleEvent() {
     let value = input.value
+    
 
     if (!value) {
         return alert("Are bhaiya, Pahle TODO to Daldo")
@@ -23,12 +38,14 @@ addBtn.addEventListener("click", () => {
     deleteButton.innerText = "del"
     deleteButton.classList.add("list-btn", "del")
 
+
+
     buttonBox.append(editButton)
     buttonBox.append(deleteButton)
 
     li.innerText = value
     li.append(buttonBox)
-
+    taskContainer.style.display = "block"
     taskContainer.append(li)
 
     input.value = ""
@@ -81,4 +98,5 @@ addBtn.addEventListener("click", () => {
 
 
 
-})
+}
+
